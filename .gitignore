@@ -1,6 +1,5 @@
 # Dependencies
 node_modules/
-package-lock.json
 
 # Environment Variables
 .env
@@ -10,8 +9,6 @@ package-lock.json
 # Build & Output Directories
 dist/
 build/
-coverage/
-.nyc_output/
 
 # IDE & Editor Files
 .idea/
@@ -19,7 +16,6 @@ coverage/
 *.swp
 *.swo
 *~
-.DS_Store
 
 # Logs
 logs/
@@ -32,18 +28,18 @@ npm-debug.log*
 *.seed
 *.pid.lock
 
-# Testing
-coverage/
-.nyc_output/
-
 # OS Generated Files
 Thumbs.db
 .DS_Store
 
-# MongoDB (if running locally in project dir)
-data/
-*.wt
-
 # Optional: If you generate any temporary files
 tmp/
 temp/
+
+# Uploaded files (keep directory structure but ignore content)
+uploads/*
+!uploads/.gitkeep
+
+# User data (ignore actual user data)
+users/*.json
+!users/.gitkeep

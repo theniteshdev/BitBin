@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BitBin — Sign In</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="/app.icons/favicons/favicon-16x16.png">
+  <link rel="stylesheet" href="/css/auth.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="auth-layout">
+    <!-- Left Side: Auth Forms -->
+    <div class="auth-side">
+      <a href="/" class="auth-back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to home
+      </a>
+
+      <div class="auth-content">
+        <div class="auth-brand">
+          <div class="auth-logo"></div>
+          <h1>BitBin</h1>
+        </div>
+
+        <!-- Toggle Tabs -->
+        <div class="auth-tabs">
+          <button class="tab-btn active" data-tab="signin">Sign in</button>
+          <button class="tab-btn" data-tab="signup">Create account</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="signin-form" class="auth-form active">
+          <div class="form-group">
+            <label for="signin-email">Email</label>
+            <input type="email" id="signin-email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="signin-password">Password</label>
+            <input type="password" id="signin-password" required autocomplete="current-password" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="signin-btn">
+            <span class="btn-text">Sign in</span>
+            <span class="btn-loader hidden"></span>
+          </button>
+          <p class="form-error" id="signin-error"></p>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form" class="auth-form">
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input type="text" id="signup-username" required autocomplete="username" placeholder="johndoe">
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required autocomplete="new-password" placeholder="At least 8 characters">
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="signup-btn">
+            <span class="btn-text">Create account</span>
+            <span class="btn-loader hidden"></span>
+          </button>
+          <p class="form-error" id="signup-error"></p>
+        </form>
+
+        <p class="auth-footer">
+          By continuing, you agree to BitBin's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side: Terminal Animation -->
+    <div class="terminal-side">
+      <div class="terminal-container">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal-title">bitbin — secure vault</div>
+        </div>
+        <div class="terminal-body" id="auth-terminal-body">
+          <span class="prompt">$</span> bitbin status<span class="cursor"></span>
+        </div>
+        <div class="terminal-footer">
+          <div class="terminal-status">
+            <span class="status-dot"></span>
+            <span id="terminal-status-text">System active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

@@ -1,24 +1,33 @@
 {
   "name": "bitbin",
   "version": "1.0.0",
-  "description": "A Cloud Storage App.",
+  "description": "A Secure, Modern Cloud Storage Solution",
+  "type": "module",
   "scripts": {
-    "client": "npx serve ./client",
-    "server": "sudo node server/app.ts"
+    "dev": "tsx watch server/app.ts",
+    "start": "tsx server/app.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theniteshdev/BitBin.git"
+    "url": "git+https://github.com/Deji-Tech/BitBin.git"
   },
   "keywords": [
-    "BitBin",
-    "couldStorage",
-    "storageApp"
+    "bitbin",
+    "cloudStorage",
+    "storageApp",
+    "e2ee",
+    "firebase"
   ],
-  "author": "theniteshdev",
+  "author": "Deji-Tech",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/theniteshdev/BitBin/issues"
+    "url": "https://github.com/Deji-Tech/BitBin/issues"
   },
-  "homepage": "https://github.com/theniteshdev/BitBin#readme"
+  "homepage": "https://github.com/Deji-Tech/BitBin#readme"
 }
